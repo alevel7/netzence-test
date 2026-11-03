@@ -7,7 +7,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
 from app.core.redis import get_redis
 from app.services.driver_service import DriverService
-from app.services.item_service import ItemService
 from app.services.ride_service import RideService
 
 
@@ -21,13 +20,6 @@ class PaginationParams:
     ):
         self.page = page
         self.page_size = page_size
-
-
-async def get_item_service(
-    session: AsyncSession = Depends(get_db),
-) -> ItemService:
-    """Dependency injecting ItemService with active DB session."""
-    return ItemService(session)
 
 
 async def get_ride_service(

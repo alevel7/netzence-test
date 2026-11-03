@@ -129,7 +129,7 @@ class RedisCache:
 
     @staticmethod
     async def delete_pattern(pattern: str) -> int:
-        """Deletes all keys matching a specific pattern (e.g. 'items:*')."""
+        """Deletes all keys matching a specific pattern (e.g. 'driver:*')."""
         try:
             client = get_redis_client()
             deleted_count = 0

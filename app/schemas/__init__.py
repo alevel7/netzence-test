@@ -8,13 +8,6 @@ from app.schemas.driver import (
     RedeemResponse,
 )
 from app.schemas.health import HealthResponse, ServiceComponentStatus
-from app.schemas.item import (
-    ItemBase,
-    ItemCreate,
-    ItemListResponse,
-    ItemResponse,
-    ItemUpdate,
-)
 from app.schemas.ride import (
     RideCancelledRequest,
     RideCancelledResponse,
@@ -25,11 +18,6 @@ from app.schemas.ride import (
 __all__ = [
     "HealthResponse",
     "ServiceComponentStatus",
-    "ItemBase",
-    "ItemCreate",
-    "ItemUpdate",
-    "ItemResponse",
-    "ItemListResponse",
     "RideCompletedRequest",
     "RideCancelledRequest",
     "RideResponse",
